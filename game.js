@@ -41,9 +41,17 @@ function prepareQuestion(){
     $(ANSWER_OPTIONS_OWNER_ID).empty();
     $(LOG_ID).empty();
     var options = [];
-    for(var i=0;i<ANSWER_OPTIONS_COUNT;i++)
+    while(options.length <ANSWER_OPTIONS_COUNT)
     {
+        //wylosowanie wersetu
         var werset = wersety[randInteger(wersety.length)];
+        //sprawdzenie czy juz nie ma takiego wylosowanego
+        if(options.indexOf(werset) >= 0)
+        {
+            log("Niestety ponownie wylosowano: " + werset.c);
+            continue;
+        }
+        //dodanie do kolekcji
         options.push(werset);
         $(ANSWER_OPTION_TYPE).text(werset.c).on("click", selectionOnClick).appendTo($(ANSWER_OPTIONS_OWNER_ID));
     }
