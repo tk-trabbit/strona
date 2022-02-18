@@ -1,0 +1,6 @@
+.good-answer{
+    background: green;
+}
+.wrong-answer{
+    background: rgb(179, 0, 0);
+}
