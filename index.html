@@ -4,12 +4,20 @@
 		<meta charset="utf-8">
 		<title>Gierka</title>
 		<style>
+			.good-answer{
+				background: green;
+			}
+			.wrong-answer{
+				background: red;
+			}
 		</style>
 	</head>
   <body>
-    <h1 id="click">Click me!</h1>
-    <ul id="list">
-    </ol>
+    <h1 id="question">Tu będzie się pojawiać pytanie</h1>
+    <ul id="answer-options">
+    </ul>
+	<button id="next-question">Następne pytanie</button>
+	<div id="log"></div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="game.js"></script>
