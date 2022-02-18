@@ -45,7 +45,7 @@ function prepareQuestion(){
     {
         var werset = wersety[randInteger(wersety.length)];
         options.push(werset);
-        $(ANSWER_OPTION_TYPE).text(werset.c).on("click", selectionOnClick).appendTo($(ANSWER_OPTIONS_OWNER_ID));
+        $(ANSWER_OPTION_TYPE).addClass("option").text(werset.c).on("click", selectionOnClick).appendTo($(ANSWER_OPTIONS_OWNER_ID));
     }
     right = options[randInteger(options.length)];
     $(QUESTION_ID).text("Co jest napisane w " + right.w + "?");
