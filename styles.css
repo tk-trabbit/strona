@@ -1,0 +1,11 @@
+
+.option{
+    background-color: rgb(138, 138, 138);
+    padding: 5px;
+}
+.good-answer{
+    background: green;
+}
+.wrong-answer{
+    background: rgb(179, 0, 0);
+}
