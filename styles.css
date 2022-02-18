@@ -1,7 +1,9 @@
 
 .option{
-    background-color: rgb(138, 138, 138);
+    background-color: rgb(241, 240, 240);
     padding: 5px;
+    border: 2px solid rgb(130, 131, 130);
+    margin: 5px;
 }
 .good-answer{
     background: green;
