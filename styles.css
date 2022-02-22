@@ -7,14 +7,13 @@
 .option{
     background-color: rgb(209, 209, 209);
     padding: 5px;
-    margin: 5px;
+    margin: 10px;
     max-width: 95%;
-    transition: 0.3s;
+    transition: 0.4s;
 }
 
 .option:hover{
-    padding: 10px;
-    max-width: 97%;
+    filter: brightness(80%);
 }
 
 .good-answer{
