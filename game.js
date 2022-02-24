@@ -39,11 +39,17 @@ var reverseQuestion = false;
 var right;
 
 function GetQuestion(){
-    return "Co jest napisane w " + right.w + "?";
+    if(reverseQuestion)
+        return "Skąd pochodzi ten cytat? " + right.c;
+    else
+        return "Co jest napisane w " + right.w + "?";
 }
 
 function GetAnswer(werset){
-    return werset.c;
+    if(reverseQuestion)
+        return werset.w;
+    else
+        return werset.c;
 }
 
 
@@ -52,6 +58,7 @@ function prepareQuestion(){
     $(ANSWER_OPTIONS_OWNER_ID).empty();
     $(LOG_ID).empty();
     var options = [];
+    reverseQuestion = randInteger(2);
     while(options.length <ANSWER_OPTIONS_COUNT)
     {
         //wylosowanie wersetu
@@ -78,7 +85,7 @@ function selectionOnClick(event){
     var answer = $(event.target).text();
     console.log(answer);
     var result;
-    if(answer === right.c){
+    if(answer === GetAnswer(right)){
         result = "Odpowiedź prawidłowa";
         $(event.target).addClass(GOOD_ANSWER_CLASS);//.css("background","green");
     }else{
