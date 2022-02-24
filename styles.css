@@ -1,13 +1,24 @@
 
-.option{
-    background-color: rgb(241, 240, 240);
-    padding: 5px;
-    border: 2px solid rgb(130, 131, 130);
-    margin: 5px;
+.option_screen_background{
+    background-color: rgb(255, 255, 255);
+    padding: 12px;
 }
+
+.option{
+    background-color: rgb(209, 209, 209);
+    padding: 5px;
+    margin: 10px;
+    max-width: 95%;
+    transition: 0.4s;
+}
+
+.option:hover{
+    filter: brightness(80%);
+}
+
 .good-answer{
-    background: green;
+    background: rgb(5, 197, 5);
 }
 .wrong-answer{
-    background: rgb(179, 0, 0);
+    background: rgb(221, 0, 0);
 }
