@@ -35,12 +35,30 @@ var wersety = [
     //{w: "", c: ""}
 ];
 
+var reverseQuestion = false;
 var right;
+
+function GetQuestion(){
+    if(reverseQuestion)
+        return "Skąd pochodzi ten cytat? " + right.c;
+    else
+        return "Co jest napisane w " + right.w + "?";
+}
+
+function GetAnswer(werset){
+    if(reverseQuestion)
+        return werset.w;
+    else
+        return werset.c;
+}
+
+
 
 function prepareQuestion(){
     $(ANSWER_OPTIONS_OWNER_ID).empty();
     $(LOG_ID).empty();
     var options = [];
+    reverseQuestion = randInteger(2);
     while(options.length <ANSWER_OPTIONS_COUNT)
     {
         //wylosowanie wersetu
@@ -48,15 +66,15 @@ function prepareQuestion(){
         //sprawdzenie czy juz nie ma takiego wylosowanego
         if(options.indexOf(werset) >= 0)
         {
-            log("Niestety ponownie wylosowano: " + werset.c);
+            log("Niestety ponownie wylosowano: " + GetAnswer(werset));
             continue;
         }
         //dodanie do kolekcji
         options.push(werset);
-        $(ANSWER_OPTION_TYPE).addClass("option").text(werset.c).on("click", selectionOnClick).appendTo($(ANSWER_OPTIONS_OWNER_ID));
+        $(ANSWER_OPTION_TYPE).addClass("option").text(GetAnswer(werset)).on("click", selectionOnClick).appendTo($(ANSWER_OPTIONS_OWNER_ID));
     }
     right = options[randInteger(options.length)];
-    $(QUESTION_ID).text("Co jest napisane w " + right.w + "?");
+    $(QUESTION_ID).text(GetQuestion());
     //log("<strong>Podpowiedź</strong> : prawidłowa odpowiedź to: " + right.w + " - " + right.c);
 }
 
@@ -67,7 +85,7 @@ function selectionOnClick(event){
     var answer = $(event.target).text();
     console.log(answer);
     var result;
-    if(answer === right.c){
+    if(answer === GetAnswer(right)){
         result = "Odpowiedź prawidłowa";
         $(event.target).addClass(GOOD_ANSWER_CLASS);//.css("background","green");
     }else{
