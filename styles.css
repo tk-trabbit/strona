@@ -16,9 +16,27 @@
     filter: brightness(80%);
 }
 
+
+
 .good-answer{
     background: rgb(5, 197, 5);
 }
 .wrong-answer{
     background: rgb(221, 0, 0);
+}
+
+
+
+.submit_button{
+    border: none;
+    color: rgb(207, 207, 207);
+    font-size: 16px;
+    font-family: fantasy;
+    padding: 10px;
+    background-color: rgb(37, 37, 37);
+    transition: 0.3s;
+}
+
+.submit_button:active{
+    filter: brightness(85%);
 }
