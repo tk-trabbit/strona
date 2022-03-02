@@ -6,8 +6,9 @@
 
 .option{
     background-color: rgb(209, 209, 209);
-    padding: 5px;
-    margin: 10px;
+    font-size: 18px;
+    padding: 8px;
+    margin: 15px;
     max-width: 95%;
     transition: 0.4s;
 }
@@ -16,9 +17,27 @@
     filter: brightness(80%);
 }
 
+
+
 .good-answer{
     background: rgb(5, 197, 5);
 }
 .wrong-answer{
     background: rgb(221, 0, 0);
+}
+
+
+
+.submit_button{
+    border: none;
+    color: rgb(175, 175, 175);
+    font-size: 23px;
+    font-family: fantasy;
+    padding: 13px;
+    background-color: rgb(37, 37, 37);
+    transition: 0.5s;
+}
+
+.submit_button:active{
+    filter: brightness(80%);
 }
