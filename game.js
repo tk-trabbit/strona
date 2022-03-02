@@ -40,7 +40,7 @@ var right;
 
 function GetQuestion(){
     if(reverseQuestion)
-        return "Skąd pochodzi ten cytat? " + right.c;
+        return "Skąd pochodzi ten cytat?<br>\"" + right.c + "\"";
     else
         return "Co jest napisane w " + right.w + "?";
 }
@@ -74,7 +74,7 @@ function prepareQuestion(){
         $(ANSWER_OPTION_TYPE).addClass("option").text(GetAnswer(werset)).on("click", selectionOnClick).appendTo($(ANSWER_OPTIONS_OWNER_ID));
     }
     right = options[randInteger(options.length)];
-    $(QUESTION_ID).text(GetQuestion());
+    $(QUESTION_ID).html(GetQuestion());
     //log("<strong>Podpowiedź</strong> : prawidłowa odpowiedź to: " + right.w + " - " + right.c);
 }
 
