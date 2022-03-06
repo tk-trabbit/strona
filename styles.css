@@ -1,10 +1,13 @@
 
 .option_screen_background{
+    border: rgb(167, 167, 167) solid 1px;
+    border-radius: 25px;
     background-color: rgb(255, 255, 255);
     padding: 12px;
 }
 
 .option{
+    border-radius: 10px;
     background-color: rgb(209, 209, 209);
     font-size: 18px;
     padding: 8px;
@@ -29,6 +32,7 @@
 
 
 .submit_button{
+    border-radius: 10px;
     border: none;
     color: rgb(175, 175, 175);
     font-size: 23px;
