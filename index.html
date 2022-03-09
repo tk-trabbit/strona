@@ -6,7 +6,15 @@
 		<link rel="stylesheet" href="styles.css">
 	</head>
   <body bgcolor="ebe8e8">
-    <h1 id="question">Tu będzie się pojawiać pytanie</h1>
+    <div style="width:100%;display:table">
+		<div style="display:table-cell;width:90%;"><h1 id="question">Tu będzie się pojawiać pytanie</h1></div>
+		<div class="score">
+			<div class="score_points" id="scored"></div>
+			<div class="score_points">/</div>
+			<div class="score_points" id="questions"></div>
+		</div>
+	</div>
+
     <ul id="answer-options" class="option_screen_background">
     </ul>
 	<button class="submit_button" id="next-question">Następne pytanie</button>

@@ -45,3 +45,15 @@
 .submit_button:active{
     filter: brightness(80%);
 }
+
+.score{
+    display:table-cell;
+    vertical-align:bottom;
+    text-align:right;
+    width:100%;
+}
+
+.score_points{
+    display:table-cell;
+    text-align:right;
+}
